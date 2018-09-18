@@ -39,7 +39,7 @@ class AboutArrays < Neo::Koan
     assert_equal [:peanut, :butter], array[0,2]
     assert_equal [:and, :jelly], array[2,2]
     assert_equal [:and, :jelly], array[2,20]
-    assert_equal [], array[4,0] # Why did these return nil
+    assert_equal [], array[4,0] # Why didn't these return nil
     assert_equal [], array[4,100]
     assert_equal [nil], array[5,0]
   end
