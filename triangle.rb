@@ -15,6 +15,11 @@
 #
 def triangle(a, b, c)
   array = [a,b,c]
+
+  # HINT: for tips, see http://stackoverflow.com/questions/3834203/ruby-koan-151-raising-exceptions
+  raise TriangleError if array.any?{ |value| value <= 0 }
+  raise TriangleError if a + b <= c || (a+c <= b) || (b+c <= a)
+
   if array.uniq.length == 1
     return :equilateral
   elsif array.uniq.length == 2
