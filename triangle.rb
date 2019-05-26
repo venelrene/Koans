@@ -14,7 +14,15 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  array = [a,b,c]
+  if array.uniq.length == 1
+    return :equilateral
+  elsif array.uniq.length == 2
+    return :isosceles
+  else
+    return :scalene
+  end
+
 end
 
 # Error class used in part 2.  No need to change this code.
